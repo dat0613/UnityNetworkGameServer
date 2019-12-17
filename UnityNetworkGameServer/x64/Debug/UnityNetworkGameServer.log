@@ -1,0 +1,60 @@
+﻿  ReadyUser.cpp
+c:\users\asus\desktop\unitynetworkgameserver\include\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnet.h(64): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnet.h(76): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnetpool.h(27): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+  ReadyRoomManager.cpp
+c:\users\asus\desktop\unitynetworkgameserver\include\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnet.h(64): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnet.h(76): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnetpool.h(27): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+  PlayerMove.cpp
+c:\users\asus\desktop\unitynetworkgameserver\include\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnet.h(64): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnet.h(76): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnetpool.h(27): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\playermove.cpp(89): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  main.cpp
+c:\users\asus\desktop\unitynetworkgameserver\include\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnet.h(64): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnet.h(76): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnetcache.h(39): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetCache' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\debug.h(23): warning C4091: 'static ': 변수를 선언하지 않으면 'Debug' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnetpool.h(27): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+  LobbyUser.cpp
+c:\users\asus\desktop\unitynetworkgameserver\include\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnet.h(64): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnet.h(76): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnetpool.h(27): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+  FirstPersonController.cpp
+c:\users\asus\desktop\unitynetworkgameserver\include\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnet.h(64): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnet.h(76): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnetpool.h(27): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+  ComponentTest.cpp
+c:\users\asus\desktop\unitynetworkgameserver\include\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnet.h(64): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnet.h(76): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnetpool.h(27): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+  BattleFieldManager.cpp
+c:\users\asus\desktop\unitynetworkgameserver\include\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnet.h(64): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnet.h(76): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\include\minnetpool.h(27): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+c:\users\asus\desktop\unitynetworkgameserver\battlefieldmanager.cpp(215): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+c:\users\asus\desktop\unitynetworkgameserver\battlefieldmanager.cpp(216): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+c:\users\asus\desktop\unitynetworkgameserver\battlefieldmanager.cpp(325): warning C4244: '=': 'float'에서 'clock_t'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+MinNetIOCP.lib(Debug.obj) : warning LNK4099: 'MinNetIOCP.pdb' PDB를 'MinNetIOCP.lib(Debug.obj)' 또는 'C:\Users\ASUS\Desktop\UnityNetworkGameServer\x64\Debug\MinNetIOCP.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+MinNetIOCP.lib(EasyContainer.obj) : warning LNK4099: 'MinNetIOCP.pdb' PDB를 'MinNetIOCP.lib(EasyContainer.obj)' 또는 'C:\Users\ASUS\Desktop\UnityNetworkGameServer\x64\Debug\MinNetIOCP.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+MinNetIOCP.lib(MinNet.obj) : warning LNK4099: 'MinNetIOCP.pdb' PDB를 'MinNetIOCP.lib(MinNet.obj)' 또는 'C:\Users\ASUS\Desktop\UnityNetworkGameServer\x64\Debug\MinNetIOCP.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+MinNetIOCP.lib(MinNetCache.obj) : warning LNK4099: 'MinNetIOCP.pdb' PDB를 'MinNetIOCP.lib(MinNetCache.obj)' 또는 'C:\Users\ASUS\Desktop\UnityNetworkGameServer\x64\Debug\MinNetIOCP.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+MinNetIOCP.lib(MinNetComponent.obj) : warning LNK4099: 'MinNetIOCP.pdb' PDB를 'MinNetIOCP.lib(MinNetComponent.obj)' 또는 'C:\Users\ASUS\Desktop\UnityNetworkGameServer\x64\Debug\MinNetIOCP.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+MinNetIOCP.lib(MinNetGameObject.obj) : warning LNK4099: 'MinNetIOCP.pdb' PDB를 'MinNetIOCP.lib(MinNetGameObject.obj)' 또는 'C:\Users\ASUS\Desktop\UnityNetworkGameServer\x64\Debug\MinNetIOCP.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+MinNetIOCP.lib(MinNetIOCP.obj) : warning LNK4099: 'MinNetIOCP.pdb' PDB를 'MinNetIOCP.lib(MinNetIOCP.obj)' 또는 'C:\Users\ASUS\Desktop\UnityNetworkGameServer\x64\Debug\MinNetIOCP.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+MinNetIOCP.lib(MinNetOptimizer.obj) : warning LNK4099: 'MinNetIOCP.pdb' PDB를 'MinNetIOCP.lib(MinNetOptimizer.obj)' 또는 'C:\Users\ASUS\Desktop\UnityNetworkGameServer\x64\Debug\MinNetIOCP.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+MinNetIOCP.lib(MinNetPool.obj) : warning LNK4099: 'MinNetIOCP.pdb' PDB를 'MinNetIOCP.lib(MinNetPool.obj)' 또는 'C:\Users\ASUS\Desktop\UnityNetworkGameServer\x64\Debug\MinNetIOCP.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+MinNetIOCP.lib(MinNetRoom.obj) : warning LNK4099: 'MinNetIOCP.pdb' PDB를 'MinNetIOCP.lib(MinNetRoom.obj)' 또는 'C:\Users\ASUS\Desktop\UnityNetworkGameServer\x64\Debug\MinNetIOCP.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+MinNetIOCP.lib(MinNetTime.obj) : warning LNK4099: 'MinNetIOCP.pdb' PDB를 'MinNetIOCP.lib(MinNetTime.obj)' 또는 'C:\Users\ASUS\Desktop\UnityNetworkGameServer\x64\Debug\MinNetIOCP.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+  UnityNetworkGameServer.vcxproj -> C:\Users\ASUS\Desktop\UnityNetworkGameServer\x64\Debug\UnityNetworkGameServer.exe
+  UnityNetworkGameServer.vcxproj -> C:\Users\ASUS\Desktop\UnityNetworkGameServer\x64\Debug\UnityNetworkGameServer.pdb (Full PDB)
