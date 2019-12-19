@@ -74,8 +74,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\ASUS\Desktop\UnityNetworkGameServer\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\ASUS\Desktop\UnityNetworkGameServer\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\ASUS\Desktop\UnityNetworkGameServer\include;C:\Users\ASUS\Documents\GitHub\UnityNetworkGameServer\UnityNetworkGameServer\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\ASUS\Desktop\UnityNetworkGameServer\lib;C:\Users\ASUS\Documents\GitHub\UnityNetworkGameServer\UnityNetworkGameServer\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>

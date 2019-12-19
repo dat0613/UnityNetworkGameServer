@@ -124,11 +124,10 @@ void main()
 
 	MinNetCache::SetSceneCache("Lobby", "Lobby");
 
-	MinNetIOCP * iocp = new MinNetIOCP();
-	iocp->SetTickrate(20);
+	MinNetIOCP::SetTickrate(20);
 
-	iocp->StartServer();
-	iocp->ServerLoop();
+	MinNetIOCP::StartServer();
+	MinNetIOCP::ServerLoop();
 
 	_getch();
 }
