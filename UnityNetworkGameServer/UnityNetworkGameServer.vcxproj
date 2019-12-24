@@ -71,11 +71,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\ASUS\Documents\GitHub\UnityNetworkGameServer\UnityNetworkGameServer\include;C:\Users\ASUS\Desktop\boost\boost_1_71_0;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\ASUS\Documents\GitHub\UnityNetworkGameServer\UnityNetworkGameServer\lib;C:\Users\ASUS\Desktop\boost\boost_1_71_0\x86\stage\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\ASUS\Desktop\UnityNetworkGameServer\include;C:\Users\ASUS\Documents\GitHub\UnityNetworkGameServer\UnityNetworkGameServer\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\ASUS\Desktop\UnityNetworkGameServer\lib;C:\Users\ASUS\Documents\GitHub\UnityNetworkGameServer\UnityNetworkGameServer\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\ASUS\Documents\GitHub\UnityNetworkGameServer\UnityNetworkGameServer\include;C:\Users\ASUS\Desktop\boost\boost_1_71_0;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\ASUS\Documents\GitHub\UnityNetworkGameServer\UnityNetworkGameServer\lib;C:\Users\ASUS\Desktop\boost\boost_1_71_0\x64\stage\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
