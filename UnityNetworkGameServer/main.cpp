@@ -126,7 +126,7 @@ void main()
 
 	MinNetIOCP::SetTickrate(20);
 
-	MinNetIOCP::StartServer();
+	MinNetIOCP::StartServer(8200, 8201);
 	MinNetIOCP::ServerLoop();
 
 	_getch();

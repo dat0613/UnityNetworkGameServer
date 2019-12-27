@@ -1,0 +1,68 @@
+﻿  ReadyUser.cpp
+c:\users\asus\documents\github\minnetiocp\minnetiocp\MinNetTime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\MinNet.h(74): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\MinNet.h(86): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\MinNetPool.h(29): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+  main.cpp
+c:\users\asus\documents\github\minnetiocp\minnetiocp\MinNetTime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\MinNet.h(74): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\MinNet.h(86): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+C:\Users\ASUS\Documents\GitHub\MinNetIOCP\MinNetIOCP\MinNetIOCP.h(112): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetIOCP' 왼쪽은 무시됩니다.
+C:\Users\ASUS\Documents\GitHub\MinNetIOCP\MinNetIOCP\MinNetCache.h(39): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetCache' 왼쪽은 무시됩니다.
+C:\Users\ASUS\Documents\GitHub\MinNetIOCP\MinNetIOCP\Debug.h(23): warning C4091: 'static ': 변수를 선언하지 않으면 'Debug' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\MinNetPool.h(29): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+MinNetIOCP.lib(MinNetOptimizer.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL'에 대해 불일치가 검색되었습니다. '2' 값이 '0'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetOptimizer.obj) : error LNK2038: 'RuntimeLibrary'에 대해 불일치가 검색되었습니다. 'MDd_DynamicDebug' 값이 'MD_DynamicRelease'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetOptimizer.obj) : warning LNK4075: '/EDITANDCONTINUE'이(가) '/OPT:ICF' 사양으로 인해 무시됩니다.
+MinNetIOCP.lib(MinNet.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL'에 대해 불일치가 검색되었습니다. '2' 값이 '0'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNet.obj) : error LNK2038: 'RuntimeLibrary'에 대해 불일치가 검색되었습니다. 'MDd_DynamicDebug' 값이 'MD_DynamicRelease'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetComponent.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL'에 대해 불일치가 검색되었습니다. '2' 값이 '0'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetComponent.obj) : error LNK2038: 'RuntimeLibrary'에 대해 불일치가 검색되었습니다. 'MDd_DynamicDebug' 값이 'MD_DynamicRelease'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetPool.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL'에 대해 불일치가 검색되었습니다. '2' 값이 '0'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetPool.obj) : error LNK2038: 'RuntimeLibrary'에 대해 불일치가 검색되었습니다. 'MDd_DynamicDebug' 값이 'MD_DynamicRelease'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetGameObject.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL'에 대해 불일치가 검색되었습니다. '2' 값이 '0'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetGameObject.obj) : error LNK2038: 'RuntimeLibrary'에 대해 불일치가 검색되었습니다. 'MDd_DynamicDebug' 값이 'MD_DynamicRelease'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetTime.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL'에 대해 불일치가 검색되었습니다. '2' 값이 '0'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetTime.obj) : error LNK2038: 'RuntimeLibrary'에 대해 불일치가 검색되었습니다. 'MDd_DynamicDebug' 값이 'MD_DynamicRelease'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetRoom.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL'에 대해 불일치가 검색되었습니다. '2' 값이 '0'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetRoom.obj) : error LNK2038: 'RuntimeLibrary'에 대해 불일치가 검색되었습니다. 'MDd_DynamicDebug' 값이 'MD_DynamicRelease'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(EasyContainer.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL'에 대해 불일치가 검색되었습니다. '2' 값이 '0'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(EasyContainer.obj) : error LNK2038: 'RuntimeLibrary'에 대해 불일치가 검색되었습니다. 'MDd_DynamicDebug' 값이 'MD_DynamicRelease'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetCache.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL'에 대해 불일치가 검색되었습니다. '2' 값이 '0'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetCache.obj) : error LNK2038: 'RuntimeLibrary'에 대해 불일치가 검색되었습니다. 'MDd_DynamicDebug' 값이 'MD_DynamicRelease'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetIOCP.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL'에 대해 불일치가 검색되었습니다. '2' 값이 '0'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetIOCP.obj) : error LNK2038: 'RuntimeLibrary'에 대해 불일치가 검색되었습니다. 'MDd_DynamicDebug' 값이 'MD_DynamicRelease'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetMySQL.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL'에 대해 불일치가 검색되었습니다. '2' 값이 '0'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(MinNetMySQL.obj) : error LNK2038: 'RuntimeLibrary'에 대해 불일치가 검색되었습니다. 'MDd_DynamicDebug' 값이 'MD_DynamicRelease'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(Debug.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL'에 대해 불일치가 검색되었습니다. '2' 값이 '0'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MinNetIOCP.lib(Debug.obj) : error LNK2038: 'RuntimeLibrary'에 대해 불일치가 검색되었습니다. 'MDd_DynamicDebug' 값이 'MD_DynamicRelease'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+libboost_thread-vc140-mt-gd-x64-1_71.lib(thread.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL'에 대해 불일치가 검색되었습니다. '2' 값이 '0'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+libboost_thread-vc140-mt-gd-x64-1_71.lib(thread.obj) : error LNK2038: 'RuntimeLibrary'에 대해 불일치가 검색되었습니다. 'MDd_DynamicDebug' 값이 'MD_DynamicRelease'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+libboost_thread-vc140-mt-gd-x64-1_71.lib(tss_pe.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL'에 대해 불일치가 검색되었습니다. '2' 값이 '0'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+libboost_thread-vc140-mt-gd-x64-1_71.lib(tss_pe.obj) : error LNK2038: 'RuntimeLibrary'에 대해 불일치가 검색되었습니다. 'MDd_DynamicDebug' 값이 'MD_DynamicRelease'(BattleFieldManager.obj에 위치) 값과 일치하지 않습니다.
+MSVCRT.lib(initializers.obj) : warning LNK4098: 'msvcrtd.lib' defaultlib가 다른 라이브러리와 충돌합니다. /NODEFAULTLIB:library를 사용하십시오.
+MinNetIOCP.lib(MinNetIOCP.obj) : error LNK2001: __imp__invalid_parameter 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(MinNetMySQL.obj) : error LNK2001: __imp__invalid_parameter 외부 기호를 확인할 수 없습니다.
+libboost_thread-vc140-mt-gd-x64-1_71.lib(thread.obj) : error LNK2001: __imp__invalid_parameter 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(MinNetGameObject.obj) : error LNK2001: __imp__invalid_parameter 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(MinNetRoom.obj) : error LNK2001: __imp__invalid_parameter 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(EasyContainer.obj) : error LNK2001: __imp__invalid_parameter 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(MinNetCache.obj) : error LNK2001: __imp__invalid_parameter 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(MinNetOptimizer.obj) : error LNK2001: __imp__invalid_parameter 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(MinNet.obj) : error LNK2001: __imp__invalid_parameter 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(MinNetComponent.obj) : error LNK2001: __imp__invalid_parameter 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(MinNetPool.obj) : error LNK2001: __imp__invalid_parameter 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(MinNetIOCP.obj) : error LNK2001: __imp__CrtDbgReportW 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(MinNetMySQL.obj) : error LNK2001: __imp__CrtDbgReportW 외부 기호를 확인할 수 없습니다.
+libboost_thread-vc140-mt-gd-x64-1_71.lib(thread.obj) : error LNK2001: __imp__CrtDbgReportW 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(MinNetGameObject.obj) : error LNK2001: __imp__CrtDbgReportW 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(MinNetRoom.obj) : error LNK2001: __imp__CrtDbgReportW 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(EasyContainer.obj) : error LNK2001: __imp__CrtDbgReportW 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(MinNetCache.obj) : error LNK2001: __imp__CrtDbgReportW 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(MinNetOptimizer.obj) : error LNK2001: __imp__CrtDbgReportW 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(MinNet.obj) : error LNK2001: __imp__CrtDbgReportW 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(MinNetComponent.obj) : error LNK2001: __imp__CrtDbgReportW 외부 기호를 확인할 수 없습니다.
+MinNetIOCP.lib(MinNetPool.obj) : error LNK2001: __imp__CrtDbgReportW 외부 기호를 확인할 수 없습니다.
+msvcrtd.lib(_init_.obj) : error LNK2001: _CrtDbgReport 외부 기호를 확인할 수 없습니다.
+msvcrtd.lib(_init_.obj) : error LNK2001: _CrtDbgReportW 외부 기호를 확인할 수 없습니다.
+C:\Users\ASUS\Documents\GitHub\UnityNetworkGameServer\UnityNetworkGameServer\x64\Release\UnityNetworkGameServer.exe : fatal error LNK1120: 4개의 확인할 수 없는 외부 참조입니다.

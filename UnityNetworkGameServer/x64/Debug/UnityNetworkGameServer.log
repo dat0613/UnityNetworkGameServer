@@ -1,8 +1,50 @@
-﻿  PlayerMove.cpp
-c:\users\asus\documents\github\unitynetworkgameserver\unitynetworkgameserver\include\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
-c:\users\asus\documents\github\unitynetworkgameserver\unitynetworkgameserver\include\minnet.h(64): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
-c:\users\asus\documents\github\unitynetworkgameserver\unitynetworkgameserver\include\minnet.h(76): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
-c:\users\asus\documents\github\unitynetworkgameserver\unitynetworkgameserver\include\minnetpool.h(27): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+﻿  main.cpp
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnet.h(74): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnet.h(86): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnetiocp.h(112): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetIOCP' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnetcache.h(39): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetCache' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\debug.h(23): warning C4091: 'static ': 변수를 선언하지 않으면 'Debug' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnetpool.h(29): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+  ReadyUser.cpp
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnet.h(74): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnet.h(86): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnetpool.h(29): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+  ReadyRoomManager.cpp
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnet.h(74): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnet.h(86): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnetpool.h(29): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+  PlayerMove.cpp
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnet.h(74): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnet.h(86): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnetpool.h(29): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
 c:\users\asus\documents\github\unitynetworkgameserver\unitynetworkgameserver\playermove.cpp(89): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  LobbyUser.cpp
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnet.h(74): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnet.h(86): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnetpool.h(29): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+  FirstPersonController.cpp
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnet.h(74): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnet.h(86): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnetpool.h(29): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+  ComponentTest.cpp
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnet.h(74): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnet.h(86): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnetpool.h(29): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+  BattleFieldManager.cpp
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnet.h(74): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnet.h(86): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\minnetiocp\minnetiocp\minnetpool.h(29): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\unitynetworkgameserver\unitynetworkgameserver\battlefieldmanager.cpp(215): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+c:\users\asus\documents\github\unitynetworkgameserver\unitynetworkgameserver\battlefieldmanager.cpp(216): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+c:\users\asus\documents\github\unitynetworkgameserver\unitynetworkgameserver\battlefieldmanager.cpp(325): warning C4244: '=': 'float'에서 'clock_t'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
   UnityNetworkGameServer.vcxproj -> C:\Users\ASUS\Documents\GitHub\UnityNetworkGameServer\UnityNetworkGameServer\x64\Debug\UnityNetworkGameServer.exe
   UnityNetworkGameServer.vcxproj -> C:\Users\ASUS\Documents\GitHub\UnityNetworkGameServer\UnityNetworkGameServer\x64\Debug\UnityNetworkGameServer.pdb (Full PDB)
