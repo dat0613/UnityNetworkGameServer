@@ -1,4 +1,4 @@
-#include "PlayerMove.h"
+ï»¿#include "PlayerMove.h"
 
 #include "MinNetGameObject.h"
 #include "MinNetRoom.h"
@@ -65,8 +65,8 @@ void PlayerMove::SyncPosition(Vector3 position, Vector3 chestRotation)
 void PlayerMove::HitSync(int hitObjectID, Vector3 hitPosition, Vector3 shotPosition, bool isHead)
 {
 	if (battleFieldManager->onlyHeadShot)
-	{// Çìµå¼¦ Àü ¿¡¼­
-		if (!isHead)// Çìµå¼¦ÀÌ ¾Æ´Ï¸é ÇÇ°İ ÆÇÁ¤ ¾ÈÇÔ
+	{// í—¤ë“œìƒ· ì „ ì—ì„œ
+		if (!isHead)// í—¤ë“œìƒ·ì´ ì•„ë‹ˆë©´ í”¼ê²© íŒì • ì•ˆí•¨
 			return;
 	}
 
@@ -78,24 +78,24 @@ void PlayerMove::HitSync(int hitObjectID, Vector3 hitPosition, Vector3 shotPosit
 	auto hitComponent = hitObj->GetComponent<PlayerMove>();
 
 	if ((hitComponent->team == team) && (hitObjectID != gameObject->GetID()))
-	{// ¾Æ±º »ç°İÀº ºÒ°¡´ÉÇÏÁö¸¸ ÀÚ½Å¿¡°Ô ÇÇÇØ¸¦ ÀÔÈ÷´Â°Ç °¡´ÉÇÔ
+	{// ì•„êµ° ì‚¬ê²©ì€ ë¶ˆê°€ëŠ¥í•˜ì§€ë§Œ ìì‹ ì—ê²Œ í”¼í•´ë¥¼ ì…íˆëŠ”ê±´ ê°€ëŠ¥í•¨
 		return;
 	}
 
-	float distance = Vector3::distance(hitPosition, hitObj->position);// ·ÎÄÃ°ú ¼­¹öÀÇ À§Ä¡ Â÷ÀÌ °è»ê
+	float distance = Vector3::distance(hitPosition, hitObj->position);// ë¡œì»¬ê³¼ ì„œë²„ì˜ ìœ„ì¹˜ ì°¨ì´ ê³„ì‚°
 
-	if (distance < 2.0f)// À§Ä¡ Â÷ÀÌ°¡ ³Ê¹« ¸¹ÀÌ ³ª¸é µ¿±âÈ­°¡ ±úÁ³°Å³ª ÇØÅ·µÈ Å¬¶óÀÌ¾ğÆ®¶ó°í ÆÇ´Ü
-	{// ¸Â¾Ò´Ù°í ÆÇ´Ü
+	if (distance < 2.0f)// ìœ„ì¹˜ ì°¨ì´ê°€ ë„ˆë¬´ ë§ì´ ë‚˜ë©´ ë™ê¸°í™”ê°€ ê¹¨ì¡Œê±°ë‚˜ í•´í‚¹ëœ í´ë¼ì´ì–¸íŠ¸ë¼ê³  íŒë‹¨
+	{// ë§ì•˜ë‹¤ê³  íŒë‹¨
 		int hitDamage = damage + static_cast<int>(isHead) * (battleFieldManager->headShotDamageMultiple - 1.0f) * damage;
-		RPC("HitSuccess", gameObject->owner, isHead, hitDamage);// ÀûÁßÇÏ´Âµ¥ ¼º°øÇß´Ù°í ¾Ë·ÁÁÜ
+		RPC("HitSuccess", gameObject->owner, isHead, hitDamage);// ì ì¤‘í•˜ëŠ”ë° ì„±ê³µí–ˆë‹¤ê³  ì•Œë ¤ì¤Œ
 
 		hitComponent->Hit(hitDamage, this);
 		hitComponent->lastHead = isHead;
 		hitComponent->RPC("HitCast", MinNetRpcTarget::AllNotServer, shotPosition, hitDamage, isHead);
 	}
 	else
-	{// ¸ÂÁö ¾Ê¾Ò´Ù°í ÆÇ´Ü
-		//std::cout << "°Å¸® Â÷ÀÌ°¡ ³Ê¹« Å­ : " << hitPosition << ", " << hitObj->position << ", " << distance << std::endl;
+	{// ë§ì§€ ì•Šì•˜ë‹¤ê³  íŒë‹¨
+		//std::cout << "ê±°ë¦¬ ì°¨ì´ê°€ ë„ˆë¬´ í¼ : " << hitPosition << ", " << hitObj->position << ", " << distance << std::endl;
 	}
 }
 
@@ -111,7 +111,7 @@ void PlayerMove::Hit(int damage, PlayerMove * shooter)
 	if (nowHP <= 0)
 	{
 		nowHP = 0;
-		// ÇÃ·¹ÀÌ¾î Á×À½
+		// í”Œë ˆì´ì–´ ì£½ìŒ
 	}
 }
 
@@ -170,12 +170,12 @@ void PlayerMove::ChangeState(State state)
 		RPC("PlayerDie", MinNetRpcTarget::All, lastHitPlayerID, lastHitPlayerName, lastHead);
 
 		auto killer = battleFieldManager->GetPlayer(lastHitPlayerID);
-		death++;// Á×Àº ±â·ÏÀ» Áõ°¡½ÃÅ´
+		death++;// ì£½ì€ ê¸°ë¡ì„ ì¦ê°€ì‹œí‚´
 		killer->AddKillCount(gameObject->GetID());
-		auto myKillCount = GetKillCount(lastHitPlayerID);// ³»°¡ »ó´ë¸¦ Ã³Ä¡ÇÑ È½¼ö
-		auto killersKillCount = killer->GetKillCount(gameObject->GetID());// »ó´ë°¡ ³ª¸¦ Ã³Ä¡ÇÑ È½¼ö
+		auto myKillCount = GetKillCount(lastHitPlayerID);// ë‚´ê°€ ìƒëŒ€ë¥¼ ì²˜ì¹˜í•œ íšŸìˆ˜
+		auto killersKillCount = killer->GetKillCount(gameObject->GetID());// ìƒëŒ€ê°€ ë‚˜ë¥¼ ì²˜ì¹˜í•œ íšŸìˆ˜
 
-		RPC("DieInformation", gameObject->owner, lastHitPlayerID, myKillCount, killersKillCount, battleFieldManager->playerRespawnDelay, MinNetTime::curTime());// Á×°íÁ×ÀÎ È½¼ö¸¦ º¸¿©ÁÖ¸é °æÀïÇÏ´Â Àç¹Ì°¡ »ı±âÁö ¾ÊÁö¸¸ ³ÖÀ½
+		RPC("DieInformation", gameObject->owner, lastHitPlayerID, myKillCount, killersKillCount, battleFieldManager->playerRespawnDelay, MinNetTime::curTime());// ì£½ê³ ì£½ì¸ íšŸìˆ˜ë¥¼ ë³´ì—¬ì£¼ë©´ ê²½ìŸí•˜ëŠ” ì¬ë¯¸ê°€ ìƒê¸°ì§€ ì•Šì§€ë§Œ ë„£ìŒ
 		
 		dieTime = MinNetTime::curTime();
 		break;
@@ -219,7 +219,7 @@ void PlayerMove::Update()
 	if (state == State::Alive)
 	{
 		if (gameObject->position.y < -25.0f)
-		{// ¶¥À» ¶Õ°í ¶³¾îÀú¼­ »ç¸Á
+		{// ë•…ì„ ëš«ê³  ë–¨ì–´ì €ì„œ ì‚¬ë§
 			Hit(9000, this);
 			RPC("HitCast", MinNetRpcTarget::AllNotServer, Vector3(0.0f, 0.0f, 0.0f), gameObject->GetID(), 9000, true);
 		}
@@ -257,7 +257,7 @@ void PlayerMove::Respawn(Vector3 position, int hp, PlayerMove::Team team)
 
 void PlayerMove::SelectTeam(Team team)
 {
-	if (this->team != team) // ÇöÀç¿Í °°ÀºÆÀÀ¸·Î ¹Ù²Ù´Â°Ç ÇÊ¿äÇÏÁö ¾ÊÀ½
+	if (this->team != team) // í˜„ì¬ì™€ ê°™ì€íŒ€ìœ¼ë¡œ ë°”ê¾¸ëŠ”ê±´ í•„ìš”í•˜ì§€ ì•ŠìŒ
 		nextSpawnTeam = team;
 }
 
@@ -315,11 +315,11 @@ int PlayerMove::GetKillCount(int victimId)
 	auto retval = 0;
 
 	if (set == killCount.end())
-	{// ÀÌ »ó´ë¿¡ ´ëÇÑ ±â·ÏÀÌ ¾øÀ½
-		killCount.insert(std::make_pair(victimId, 0));// Ã³Ä¡°¡ 0ÀÎ ±â·ÏÀ» ¹Ì¸® ¸¸µé¾î µÒ
+	{// ì´ ìƒëŒ€ì— ëŒ€í•œ ê¸°ë¡ì´ ì—†ìŒ
+		killCount.insert(std::make_pair(victimId, 0));// ì²˜ì¹˜ê°€ 0ì¸ ê¸°ë¡ì„ ë¯¸ë¦¬ ë§Œë“¤ì–´ ë‘ 
 	}
 	else
-	{// ±â·ÏÀÌ ÀÖÀ½
+	{// ê¸°ë¡ì´ ìˆìŒ
 		retval = set->second;
 	}
 
@@ -331,15 +331,15 @@ void PlayerMove::AddKillCount(int victimId)
 	auto set = killCount.find(victimId);
 
 	if (set == killCount.end())
-	{// ÀÌ »ó´ë¿¡ ´ëÇÑ ±â·ÏÀÌ ¾øÀ½
-		killCount.insert(std::make_pair(victimId, 1));// Ã¹ Ã³Ä¡¸¦ ±â·ÏÇÔ
+	{// ì´ ìƒëŒ€ì— ëŒ€í•œ ê¸°ë¡ì´ ì—†ìŒ
+		killCount.insert(std::make_pair(victimId, 1));// ì²« ì²˜ì¹˜ë¥¼ ê¸°ë¡í•¨
 	}
 	else
-	{// ÀÌ »ó´ë¿¡ ´ëÇÑ Ã³Ä¡ È½¼ö¸¦ ¿Ã¸²
+	{// ì´ ìƒëŒ€ì— ëŒ€í•œ ì²˜ì¹˜ íšŸìˆ˜ë¥¼ ì˜¬ë¦¼
 		killCount[victimId] = set->second + 1;
 	}
 
-	kill++;// ÀüÃ¼ Ã³Ä¡ ±â·Ïµµ ¿Ã¸²
+	kill++;// ì „ì²´ ì²˜ì¹˜ ê¸°ë¡ë„ ì˜¬ë¦¼
 }
 
 bool PlayerMove::IsCanRespawn(clock_t playerRespawnDelay)

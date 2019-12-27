@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "MinNetOptimizer.h"
 #include "MinNetOverlapped.h"

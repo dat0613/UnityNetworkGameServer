@@ -1,4 +1,4 @@
-#pragma once
+Ôªø#pragma once
 #include <atomic>
 #include <functional>
 #include <queue>
@@ -81,8 +81,8 @@ public:
 
 		spinLock.lock();
 		if (pool.empty())
-		{// «Æ¿Ã ∫ÒæÓ¿÷¿Ω
-			std::cout << typeid(T).name() << " «Æ¿« ∞¥√º∞° ∞Ì∞•µ«æÓ ªı∑ŒøÓ ∞¥√º∏¶ ª˝º∫«’¥œ¥Ÿ" << std::endl;
+		{// ÌíÄÏù¥ ÎπÑÏñ¥ÏûàÏùå
+			std::cout << typeid(T).name() << " ÌíÄÏùò Í∞ùÏ≤¥Í∞Ä Í≥†Í∞àÎêòÏñ¥ ÏÉàÎ°úÏö¥ Í∞ùÏ≤¥Î•º ÏÉùÏÑ±Ìï©ÎãàÎã§" << std::endl;
 			retval = CreateNewObject();
 		}
 		else

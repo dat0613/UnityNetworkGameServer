@@ -1,4 +1,4 @@
-#include "ComponentTest.h"
+ï»¿#include "ComponentTest.h"
 #include <MinNetGameObject.h>
 
 
@@ -19,7 +19,7 @@ void ComponentTest::SendTest(int num, float num2, std::string sanz)
 	std::cout << num2 << std::endl;
 	std::cout << sanz.c_str() << std::endl;
 
-	RPC("RecvTest", gameObject->owner, "Àß µÇ³Ä??1@#123A$S@F!12df");
+	RPC("RecvTest", gameObject->owner, "ì˜ ë˜ëƒ??1@#123A$S@F!12df");
 }
 
 ComponentTest::ComponentTest()

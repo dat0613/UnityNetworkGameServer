@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <string>
 #include <iostream>
@@ -40,7 +40,7 @@ public:
 	std::list<MinNetUser *> * GetUserList();
 
 	bool destroyWhenEmpty = false;
-	bool changeRoom = false; // ·ëÀÌ ½ÇÇàµÇ´Â µµÁß ·ë ¿É¼ÇÀ» ¹Ù²Ü¶§ true·Î
+	bool changeRoom = false; // ë£¸ì´ ì‹¤í–‰ë˜ëŠ” ë„ì¤‘ ë£¸ ì˜µì…˜ì„ ë°”ê¿€ë•Œ trueë¡œ
 	std::string changeRoomName = "";
 
 	std::shared_ptr<MinNetGameObject> Instantiate(std::string prefabName);
@@ -101,7 +101,7 @@ private:
 
 	int id_count = 0;
 
-	bool lock = false;// ¹æ Á¢¼Ó Â÷´Ü
+	bool lock = false;// ë°© ì ‘ì† ì°¨ë‹¨
 
 	std::map<int, MinNetUser *> user_map;
 	std::list<MinNetUser *> user_list;

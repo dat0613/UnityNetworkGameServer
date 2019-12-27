@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <MinNetComponent.h>
 #include <list>
 #include <vector>
@@ -14,7 +14,7 @@ public:
 	BattleFieldManager();
 	~BattleFieldManager();
 
-	enum class BattleFieldState { GameReady, GameStart, GameEnd, MAX }; // °ÔÀÓ ÁØºñ, °ÔÀÓ ½ÃÀÛ, °ÔÀÓ ³¡
+	enum class BattleFieldState { GameReady, GameStart, GameEnd, MAX }; // ê²Œì„ ì¤€ë¹„, ê²Œì„ ì‹œì‘, ê²Œì„ ë
 
 	BattleFieldState state = BattleFieldState::MAX;
 
@@ -45,25 +45,25 @@ private:
 
 
 	//clock_t readyStartTime = 0;
-	//clock_t readyTime = 5000;// ÁØºñ½Ã°£Àº Àß ¸ğ¸£°ÚÀ½
+	//clock_t readyTime = 5000;// ì¤€ë¹„ì‹œê°„ì€ ì˜ ëª¨ë¥´ê² ìŒ
 
 	//clock_t gameStartTime = 0;
-	//clock_t gameTime = 60000;// ¸îms µ¿¾È °ÔÀÓÀ» ÇÒÁö
+	//clock_t gameTime = 60000;// ëª‡ms ë™ì•ˆ ê²Œì„ì„ í• ì§€
 	//
 	//clock_t gameEndTime = 0;
-	//clock_t endTime = 3000;// ¸îÃÊ ÈÄ¿¡ °á°úÃ¢À» º¸³¾Áö
+	//clock_t endTime = 3000;// ëª‡ì´ˆ í›„ì— ê²°ê³¼ì°½ì„ ë³´ë‚¼ì§€
 
 	std::list<std::weak_ptr<MinNetComponent>> playerList;
 
 	//clock_t getNowStateLeftTime();
 
 	std::vector<std::vector<Vector3>> respawnPoints;
-	std::vector<int> respawnPointCount;// °°Àº°÷¿¡ ¿©·¯¸íÀÌ ¸®½ºÆù µÇÁö ¾Ê°Ô ÇÏ±â À§ÇØ ¼øÂ÷ÀûÀ¸·Î ¸®½ºÆù ½ÃÅ´
+	std::vector<int> respawnPointCount;// ê°™ì€ê³³ì— ì—¬ëŸ¬ëª…ì´ ë¦¬ìŠ¤í° ë˜ì§€ ì•Šê²Œ í•˜ê¸° ìœ„í•´ ìˆœì°¨ì ìœ¼ë¡œ ë¦¬ìŠ¤í° ì‹œí‚´
 
-	PlayerMove::Team getPeacefulTeam();// ÇÃ·¹ÀÌ¾î°¡ ÀûÀº ÆÀÀ» ¸®ÅÏÇÔ
+	PlayerMove::Team getPeacefulTeam();// í”Œë ˆì´ì–´ê°€ ì ì€ íŒ€ì„ ë¦¬í„´í•¨
 	bool isPeacefulTeam(PlayerMove::Team team);
 
-	void setRespawnPoints();// ÇÃ·¹ÀÌ¾îµéÀÇ ¸®½ºÆù ÁöÁ¡À» Á¤ÇÔ
+	void setRespawnPoints();// í”Œë ˆì´ì–´ë“¤ì˜ ë¦¬ìŠ¤í° ì§€ì ì„ ì •í•¨
 	Vector3 getRespawnPoint(PlayerMove::Team team);
 	
 	void PlayerRespawnUpdate(PlayerMove * player);
@@ -73,7 +73,7 @@ private:
 
 	PlayerMove::Team winnerTeam = PlayerMove::Team::None;
 	clock_t winTime = 0;
-	clock_t winDelayTime = 5000; // °ÔÀÓÀÌ ³¡³ª°í 5ÃÊÈÄ¿¡ ´Ù½Ã ´ë±â½Ç·Î µ¹¾Æ°¨
+	clock_t winDelayTime = 5000; // ê²Œì„ì´ ëë‚˜ê³  5ì´ˆí›„ì— ë‹¤ì‹œ ëŒ€ê¸°ì‹¤ë¡œ ëŒì•„ê°
 
 	bool controllAllow = false;
 };

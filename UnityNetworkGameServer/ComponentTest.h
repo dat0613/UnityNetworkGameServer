@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <MinNetComponent.h>
 class ComponentTest :
 	public MinNetComponent

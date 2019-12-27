@@ -1,4 +1,4 @@
-#include "ReadyRoomManager.h"
+ï»¿#include "ReadyRoomManager.h"
 
 #include "ReadyUser.h"
 #include <MinNet.h>
@@ -31,7 +31,7 @@ void ReadyRoomManager::OnInstantiate(MinNetUser * user)
 
 void ReadyRoomManager::SetOption(std::string roomName, int TeamNumber, bool CanBargeIn, bool OnlyHeadShot, int TicketCount, float RespawnTime, int DefaultDamage, float HeadShotDamageMultiple, int PlayerMaxHP)
 {
-	//std::cout << roomName.c_str() << " ÀÇ ÀÌ¸§À» °¡Áø °ÔÀÓ¹æÀ» ¸¸µê" << std::endl;
+	//std::cout << roomName.c_str() << " ì˜ ì´ë¦„ì„ ê°€ì§„ ê²Œì„ë°©ì„ ë§Œë“¦" << std::endl;
 	this->roomName = roomName;
 	this->TeamNumber = TeamNumber;
 	this->CanBargeIn = CanBargeIn;
@@ -54,7 +54,7 @@ void ReadyRoomManager::AddUser(std::weak_ptr<MinNetComponent> user)
 	}
 
 	for (auto component : userList)
-	{// ÆÀ Ã¢¿¡¼­ ¼ø¼­º¸ÀåÀ» À§ÇØ ¸®½ºÆ®¿¡ ÀÖ´Â ¼ø¼­´ë·Î ÆĞÅ¶À» º¸³»ÁÜ
+	{// íŒ€ ì°½ì—ì„œ ìˆœì„œë³´ì¥ì„ ìœ„í•´ ë¦¬ìŠ¤íŠ¸ì— ìˆëŠ” ìˆœì„œëŒ€ë¡œ íŒ¨í‚·ì„ ë³´ë‚´ì¤Œ
 		auto oldUser = static_cast<ReadyUser *>(component.lock().get());
 		sharedUser->RPC("SetTeam", sharedUser->gameObject->owner, static_cast<int>(oldUser->GetTeam()));
 	}
@@ -78,13 +78,13 @@ void ReadyRoomManager::DelUser(std::weak_ptr<MinNetComponent> user)
 
 	auto readyUser = static_cast<ReadyUser *>(user.lock().get());
 	if (readyUser->GetIsMaster())
-	{// ¹æÀåÀÌ ³ª°¬À¸¹Ç·Î ¹æÀå ´ÙÀ½À¸·Î ¸ÕÀú µé¾î¿Â ÇÃ·¹ÀÌ¾î¸¦ ¹æÀåÀ¸·Î ÁöÁ¤ÇÔ
+	{// ë°©ì¥ì´ ë‚˜ê°”ìœ¼ë¯€ë¡œ ë°©ì¥ ë‹¤ìŒìœ¼ë¡œ ë¨¼ì € ë“¤ì–´ì˜¨ í”Œë ˆì´ì–´ë¥¼ ë°©ì¥ìœ¼ë¡œ ì§€ì •í•¨
 		if (userList.size() > 0)
 		{
 			userList.front().lock()->RPC("SetMaster", MinNetRpcTarget::All, true);
 		}
 		else
-		{// ÀÌ¶§´Â ¹æÀ» ÅÍÆ®¸²
+		{// ì´ë•ŒëŠ” ë°©ì„ í„°íŠ¸ë¦¼
 
 		}
 	}
@@ -118,23 +118,23 @@ void ReadyRoomManager::GameStart(std::weak_ptr<MinNetComponent> component)
 	std::string reason = "";
 
 	if (blueTeamCount + redTeamCount < 2)
-	{// »ç¶÷ÀÌ ³Ê¹« Àû¾î °ÔÀÓ½ÃÀÛ ºÒ°¡´É
-		reason = "ÇÃ·¹ÀÌ¾î°¡ ³Ê¹« Àû¾î °ÔÀÓÀ» ½ÃÀÛÇÒ ¼ö ¾ø½À´Ï´Ù.";
+	{// ì‚¬ëŒì´ ë„ˆë¬´ ì ì–´ ê²Œì„ì‹œì‘ ë¶ˆê°€ëŠ¥
+		reason = "í”Œë ˆì´ì–´ê°€ ë„ˆë¬´ ì ì–´ ê²Œì„ì„ ì‹œì‘í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.";
 	}
 	else if (abs(blueTeamCount - redTeamCount) > 1)
-	{// ÆÀ¿øÀÌ ±ÕµîÇÏÁö ¾ÊÀ½
-		reason = "ÇÑÂÊ ÆÀ¿¡ ÇÃ·¹ÀÌ¾î°¡ ¸ô·Á ÀÖ½À´Ï´Ù.";
+	{// íŒ€ì›ì´ ê· ë“±í•˜ì§€ ì•ŠìŒ
+		reason = "í•œìª½ íŒ€ì— í”Œë ˆì´ì–´ê°€ ëª°ë ¤ ìˆìŠµë‹ˆë‹¤.";
 	}
 
 	if (reason == "")
-	{// °×½ÃÀÛ
+	{// ê²œì‹œì‘
 
 		for (auto comp : userList)
 		{
 			if (!comp.expired())
 			{
 				auto readyUser = static_cast<ReadyUser *>(comp.lock().get());
-				readyUser->gameObject->owner->userValue.SetValue("Team", static_cast<int>(readyUser->GetTeam()));// À¯ÀúµéÀÇ ÆÀÀ» ÀÓ½Ã ÀúÀå
+				readyUser->gameObject->owner->userValue.SetValue("Team", static_cast<int>(readyUser->GetTeam()));// ìœ ì €ë“¤ì˜ íŒ€ì„ ì„ì‹œ ì €ì¥
 				gameObject->GetNowRoom()->SetLock(!CanBargeIn);
 			}
 		}
@@ -187,7 +187,7 @@ PlayerMove::Team ReadyRoomManager::GetPeacefulTeam()
 	}
 
 	if (blueTeamCount == redTeamCount)
-	{// »ç¶÷¼ö °°À¸¸é ·£´ıÀ¸·Î ÇÔ
+	{// ì‚¬ëŒìˆ˜ ê°™ìœ¼ë©´ ëœë¤ìœ¼ë¡œ í•¨
 		if (rand() % 2 == 0)
 			return PlayerMove::Team::Red;
 		else
@@ -195,9 +195,9 @@ PlayerMove::Team ReadyRoomManager::GetPeacefulTeam()
 	}
 	else
 	{
-		if (blueTeamCount > redTeamCount)// ·¹µåÆÀ¿¡ »ç¶÷ÀÌ ´õ ÀûÀ½
+		if (blueTeamCount > redTeamCount)// ë ˆë“œíŒ€ì— ì‚¬ëŒì´ ë” ì ìŒ
 			return PlayerMove::Team::Red;
-		else// ºí·çÆÀ¿¡ »ç¶÷ÀÌ ´õ ÀûÀ½
+		else// ë¸”ë£¨íŒ€ì— ì‚¬ëŒì´ ë” ì ìŒ
 			return PlayerMove::Team::Blue;
 	}
 	return PlayerMove::Team();

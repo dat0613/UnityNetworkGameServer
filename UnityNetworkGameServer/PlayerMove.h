@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <MinNetComponent.h>
 #include <MinNet.h>
 #include <Time.h>
@@ -11,11 +11,11 @@ public:
 	
 	std::string playerName = "";
 
-	int lastHitPlayerID = -1; // °¡Àå ÃÖ±Ù¿¡ ÀÌ ÇÃ·¹ÀÌ¾î¸¦ °ø°İÇÑ ÇÃ·¹ÀÌ¾îÀÇ ID
-	std::string lastHitPlayerName = ""; // Å³·Î±×°¡ ¶ß±â Àü¿¡ °ø°İÀÚ°¡ ³ª°¡¸é ID¸¦ ÅëÇØ ÇÃ·¹ÀÌ¾î¸¦ Ã£À» ¼ö ¾ø±â¶§¹®¿¡ ¹Ì¸® ÀÌ¸§À» ÀúÀåÇØ µÒ
+	int lastHitPlayerID = -1; // ê°€ì¥ ìµœê·¼ì— ì´ í”Œë ˆì´ì–´ë¥¼ ê³µê²©í•œ í”Œë ˆì´ì–´ì˜ ID
+	std::string lastHitPlayerName = ""; // í‚¬ë¡œê·¸ê°€ ëœ¨ê¸° ì „ì— ê³µê²©ìê°€ ë‚˜ê°€ë©´ IDë¥¼ í†µí•´ í”Œë ˆì´ì–´ë¥¼ ì°¾ì„ ìˆ˜ ì—†ê¸°ë•Œë¬¸ì— ë¯¸ë¦¬ ì´ë¦„ì„ ì €ì¥í•´ ë‘ 
 
-	clock_t lastHit = 0; // °¡Àå ÃÖ±Ù¿¡ ¸ÂÀº ½Ã°£
-	clock_t hitResetTime = 3000; // ¸ÂÀº »óÅÂ¸¦ ¸®¼ÂÇÏ´Â ½Ã°£
+	clock_t lastHit = 0; // ê°€ì¥ ìµœê·¼ì— ë§ì€ ì‹œê°„
+	clock_t hitResetTime = 3000; // ë§ì€ ìƒíƒœë¥¼ ë¦¬ì…‹í•˜ëŠ” ì‹œê°„
 
 	bool lastHead = false;
 
@@ -33,7 +33,7 @@ public:
 	BattleFieldManager * battleFieldManager = nullptr;
 
 	Team team = Team::Spectator;
-	Team nextSpawnTeam = Team::None; // ÇÑ¹ø Á×°í³­ ´ÙÀ½ ¹Ù²Ü ÆÀ
+	Team nextSpawnTeam = Team::None; // í•œë²ˆ ì£½ê³ ë‚œ ë‹¤ìŒ ë°”ê¿€ íŒ€
 	
 	State state = State::Die;
 
@@ -74,7 +74,7 @@ public:
 private:
 
 	Vector3 chestRotation;
-	std::map<int, int> killCount;// Å°°ªÀ» id·Î °®´Â ÇÃ·¹ÀÌ¾î¸¦ ¾ó¸¶³ª »ç»ì ÇÏ¿´´ÂÁö
+	std::map<int, int> killCount;// í‚¤ê°’ì„ idë¡œ ê°–ëŠ” í”Œë ˆì´ì–´ë¥¼ ì–¼ë§ˆë‚˜ ì‚¬ì‚´ í•˜ì˜€ëŠ”ì§€
 	void SyncScore();
 
 	void SetMaxHP(int maxHP);

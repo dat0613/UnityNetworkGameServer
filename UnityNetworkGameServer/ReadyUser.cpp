@@ -1,4 +1,4 @@
-#include "ReadyUser.h"
+ï»¿#include "ReadyUser.h"
 
 #include <MinNetGameObject.h>
 #include "ReadyRoomManager.h"
@@ -54,7 +54,7 @@ void ReadyUser::OnDestroy()
 
 void ReadyUser::OnInstantiate(MinNetUser * user)
 {
-	RPC("SetTeam", user, static_cast<int>(team));// »õ·Î¿Â ÇÃ·¹ÀÌ¾î¿¡°Ô ±âÁ¸ Á¤º¸µéÀ» ¾Ë¸²
+	RPC("SetTeam", user, static_cast<int>(team));// ìƒˆë¡œì˜¨ í”Œë ˆì´ì–´ì—ê²Œ ê¸°ì¡´ ì •ë³´ë“¤ì„ ì•Œë¦¼
 	RPC("SetNickName", user, nickName);
 
 	if (isMaster)

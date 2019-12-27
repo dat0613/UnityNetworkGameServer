@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <iostream>
 #include "MinNet.h"
@@ -22,10 +22,10 @@ class MinNetGameObject
 {
 private:
 
-	std::map<std::string, std::shared_ptr<MinNetComponent>> componentMap;// ÄÄÆ÷³ÍÆ®¸¦ Ã£À»¶§ »ç¿ëÇÒ map
-	std::list<std::shared_ptr<MinNetComponent>> componentList;// ÄÄÆ÷³ÍÆ®¸¦ ¼øÈ¸ÇÏ¸ç updateµîÀÇ ÇÔ¼ö¸¦ È£ÃâÇÒ ¶§ »ç¿ëÇÒ list
+	std::map<std::string, std::shared_ptr<MinNetComponent>> componentMap;// ì»´í¬ë„ŒíŠ¸ë¥¼ ì°¾ì„ë•Œ ì‚¬ìš©í•  map
+	std::list<std::shared_ptr<MinNetComponent>> componentList;// ì»´í¬ë„ŒíŠ¸ë¥¼ ìˆœíšŒí•˜ë©° updateë“±ì˜ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•  ë•Œ ì‚¬ìš©í•  list
 
-	std::string name = "";// ÇÁ¸®ÆéÀÇ ÀÌ¸§
+	std::string name = "";// í”„ë¦¬í©ì˜ ì´ë¦„
 	MinNetRoom * nowRoom = nullptr;
 	int objectId = -1;
 
@@ -45,8 +45,8 @@ public:
 	Vector3 rotation = { 0.0f, 0.0f, 0.0f };
 	Vector3 scale = { 1.0f, 1.0f, 1.0f };
 
-	//bool isNetworkObject = true;// Å¬¶óÀÌ¾ğÆ®¿Í µ¿±âÈ­ ÇÒÁö
-	bool isSyncingObject = true;// ´Ù¸¥ Å¬¶óÀÌ¾ğÆ® ¿¡°Ô ÆĞÅ¶À» º¸³¾ ¼ö ÀÖÀ»Áö
+	//bool isNetworkObject = true;// í´ë¼ì´ì–¸íŠ¸ì™€ ë™ê¸°í™” í• ì§€
+	bool isSyncingObject = true;// ë‹¤ë¥¸ í´ë¼ì´ì–¸íŠ¸ ì—ê²Œ íŒ¨í‚·ì„ ë³´ë‚¼ ìˆ˜ ìˆì„ì§€
 	MinNetUser * owner = nullptr;
 
 	void ChangeRoom(MinNetRoom * room);
@@ -63,12 +63,12 @@ public:
 	void Update();
 	void LateUpdate();
 
-	std::shared_ptr<MinNetComponent> GetComponent(std::string componentName);// ÄÄÆ÷³ÍÆ®¸¦ Ã£´Â ÇÔ¼ö
+	std::shared_ptr<MinNetComponent> GetComponent(std::string componentName);// ì»´í¬ë„ŒíŠ¸ë¥¼ ì°¾ëŠ” í•¨ìˆ˜
 
 	template <typename T>
 	T * GetComponent();
 
-	EasyContainer gameObjectOption;// ÀÓ½Ã °ª µéÀ» ÀúÀåÇÒ ÄÁÅ×ÀÌ³Ê
+	EasyContainer gameObjectOption;// ì„ì‹œ ê°’ ë“¤ì„ ì €ì¥í•  ì»¨í…Œì´ë„ˆ
 
 public:
 
@@ -89,7 +89,7 @@ public:
 		comp->ComponentName = typeName;
 		if (comp == nullptr)
 		{
-			std::cout << typeName.c_str() << "Àº MinNetComponent¸¦ »ó¼ÓÇÏÁö ¾Ê½À´Ï´Ù." << std::endl;
+			std::cout << typeName.c_str() << "ì€ MinNetComponentë¥¼ ìƒì†í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤." << std::endl;
 			delete temp;
 		}
 		else
@@ -104,7 +104,7 @@ public:
 
 			shared->InitRPC();
 
-			if(this->nowRoom != nullptr)// ÀÌ¹Ì ÇÑ¹ø ÃÊ±âÈ­µÈ °ÔÀÓ ¿ÀºêÁ§Æ®¿¡ Ãß°¡·Î ÄÄÆ÷³ÍÆ®¸¦ ºÙÈù °ÍÀÓ
+			if(this->nowRoom != nullptr)// ì´ë¯¸ í•œë²ˆ ì´ˆê¸°í™”ëœ ê²Œì„ ì˜¤ë¸Œì íŠ¸ì— ì¶”ê°€ë¡œ ì»´í¬ë„ŒíŠ¸ë¥¼ ë¶™íŒ ê²ƒì„
 				shared->Awake();
 		}
 	}
@@ -127,7 +127,7 @@ inline T * MinNetGameObject::GetComponent()
 	auto set = componentMap.find(typeName);
 
 	if (set == componentMap.end())
-	{// Ã£´Â ÄÄÆ÷³ÍÆ®°¡ ¾øÀ½
+	{// ì°¾ëŠ” ì»´í¬ë„ŒíŠ¸ê°€ ì—†ìŒ
 		return nullptr;
 	}
 	else

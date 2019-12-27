@@ -1,4 +1,4 @@
-#include "LobbyUser.h"
+ï»¿#include "LobbyUser.h"
 #include <MinNetGameObject.h>
 
 LobbyUser::LobbyUser()
@@ -44,7 +44,7 @@ void LobbyUser::GetRoomList()
 
 		if (managerObject == nullptr)
 		{
-			std::cout << "¿©±â ÀÎ°Å °¡ÅÂ" << std::endl;
+			std::cout << "ì—¬ê¸° ì¸ê±° ê°€íƒœ" << std::endl;
 			continue;
 		}
 
@@ -55,13 +55,13 @@ void LobbyUser::GetRoomList()
 		int maxUser = room->GetMaxUser();
 
 		if (readyRoom)
-		{// °ÔÀÓ ´ë±âÁßÀÎ ·ë
-			roomState = "´ë±âÁß";
+		{// ê²Œìž„ ëŒ€ê¸°ì¤‘ì¸ ë£¸
+			roomState = "ëŒ€ê¸°ì¤‘";
 		}
 		
 		if (battlefieldRoom)
-		{// °ÔÀÓ ÁßÀÎ ·ë
-			roomState = "°ÔÀÓÁß";
+		{// ê²Œìž„ ì¤‘ì¸ ë£¸
+			roomState = "ê²Œìž„ì¤‘";
 		}
 
 		RPC("AddRoom", gameObject->owner, roomTitle, roomState, roomId, nowUser, maxUser);

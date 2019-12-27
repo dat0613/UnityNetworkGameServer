@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <conio.h>
 
 #include <MinNetIOCP.h>
@@ -63,7 +63,7 @@ void main()
 		float HeadShotDamageMultiple = 0.0f;
 		int PlayerMaxHP = 0;
 
-		if (packet != nullptr)// Ã³À½À¸·Î ÀÌ ¹æÀ» ¸¸µé¾úÀ»¶§, nullptr ÀÏ¶§´Â °ÔÀÓÀÌ ³¡³­ ÈÄ ´Ù½Ã ´ë±â½Ç·Î µ¹¾Æ¿ÔÀ»¶§ ÀÓ
+		if (packet != nullptr)// ì²˜ìŒìœ¼ë¡œ ì´ ë°©ì„ ë§Œë“¤ì—ˆì„ë•Œ, nullptr ì¼ë•ŒëŠ” ê²Œìž„ì´ ëë‚œ í›„ ë‹¤ì‹œ ëŒ€ê¸°ì‹¤ë¡œ ëŒì•„ì™”ì„ë•Œ ìž„
 		{
 			room->destroyWhenEmpty = true;
 

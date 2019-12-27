@@ -1,10 +1,8 @@
-﻿  main.cpp
+﻿  PlayerMove.cpp
 c:\users\asus\documents\github\unitynetworkgameserver\unitynetworkgameserver\include\minnettime.h(20): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetTime' 왼쪽은 무시됩니다.
 c:\users\asus\documents\github\unitynetworkgameserver\unitynetworkgameserver\include\minnet.h(64): warning C4091: 'static ': 변수를 선언하지 않으면 'BitConverter' 왼쪽은 무시됩니다.
 c:\users\asus\documents\github\unitynetworkgameserver\unitynetworkgameserver\include\minnet.h(76): warning C4091: 'static ': 변수를 선언하지 않으면 'StringConverter' 왼쪽은 무시됩니다.
-c:\users\asus\documents\github\unitynetworkgameserver\unitynetworkgameserver\include\minnetiocp.h(78): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetIOCP' 왼쪽은 무시됩니다.
-c:\users\asus\documents\github\unitynetworkgameserver\unitynetworkgameserver\include\minnetcache.h(39): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetCache' 왼쪽은 무시됩니다.
-c:\users\asus\documents\github\unitynetworkgameserver\unitynetworkgameserver\include\debug.h(23): warning C4091: 'static ': 변수를 선언하지 않으면 'Debug' 왼쪽은 무시됩니다.
 c:\users\asus\documents\github\unitynetworkgameserver\unitynetworkgameserver\include\minnetpool.h(27): warning C4091: 'static ': 변수를 선언하지 않으면 'MinNetPool' 왼쪽은 무시됩니다.
+c:\users\asus\documents\github\unitynetworkgameserver\unitynetworkgameserver\playermove.cpp(89): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   UnityNetworkGameServer.vcxproj -> C:\Users\ASUS\Documents\GitHub\UnityNetworkGameServer\UnityNetworkGameServer\x64\Debug\UnityNetworkGameServer.exe
   UnityNetworkGameServer.vcxproj -> C:\Users\ASUS\Documents\GitHub\UnityNetworkGameServer\UnityNetworkGameServer\x64\Debug\UnityNetworkGameServer.pdb (Full PDB)

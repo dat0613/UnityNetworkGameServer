@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <MinNetComponent.h>
 #include "PlayerMove.h"
 
@@ -18,7 +18,7 @@ public:
 	void DelUser(std::weak_ptr<MinNetComponent> user);
 
 	void GameStart(std::weak_ptr<MinNetComponent> component);
-	int GetOrderCount();// ´ë±â½Ç¿¡¼­ ÇÃ·¹ÀÌ¾îµéÀÇ ¼ø¼­ º¸ÀåÀ» À§ÇØ »ç¿ëÇÔ
+	int GetOrderCount();// ëŒ€ê¸°ì‹¤ì—ì„œ í”Œë ˆì´ì–´ë“¤ì˜ ìˆœì„œ ë³´ì¥ì„ ìœ„í•´ ì‚¬ìš©í•¨
 	void OrderSort();
 
 private:

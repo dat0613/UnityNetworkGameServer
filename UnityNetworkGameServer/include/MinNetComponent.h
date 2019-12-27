@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <memory>
 #include <iostream>
@@ -40,16 +40,16 @@ public:
 	std::string ComponentName = "";
 
 	template <typename ... args>
-	void RPC(std::string methodName, MinNetRpcTarget target, args&&... parameters);// RPC¸¦ È£ÃâÇÒ¶§
+	void RPC(std::string methodName, MinNetRpcTarget target, args&&... parameters);// RPCë¥¼ í˜¸ì¶œí• ë•Œ
 
 	template <typename ... args>
-	void RPC(std::string methodName, MinNetUser * target, args&&... parameters);// RPC¸¦ È£ÃâÇÒ¶§
+	void RPC(std::string methodName, MinNetUser * target, args&&... parameters);// RPCë¥¼ í˜¸ì¶œí• ë•Œ
 
 	template <typename ... args>
-	void RPCudp(std::string methodName, MinNetRpcTarget target, args&&... parameters);// RPC¸¦ È£ÃâÇÒ¶§
+	void RPCudp(std::string methodName, MinNetRpcTarget target, args&&... parameters);// RPCë¥¼ í˜¸ì¶œí• ë•Œ
 
 	template <typename ... args>
-	void RPCudp(std::string methodName, MinNetUser * target, args&&... parameters);// RPC¸¦ È£ÃâÇÒ¶§
+	void RPCudp(std::string methodName, MinNetUser * target, args&&... parameters);// RPCë¥¼ í˜¸ì¶œí• ë•Œ
 	
 	template <typename first, typename ... args>
 	void VariableArgumentReader(MinNetPacket * packet, first f, args&&... parameters);
@@ -68,14 +68,14 @@ template<typename ...args>
 inline void MinNetComponent::RPC(std::string methodName, MinNetRpcTarget target, args && ...parameters)
 {
 	if (!gameObject->isSyncingObject)
-	{// ´Ù¸¥ Å¬¶óÀÌ¾ðÆ®¿Í µ¿±âÈ­ µÇÁö ¾Ê´Â ¿ÀºêÁ§Æ®´Â ¿ÀÁ÷ ÀÚ½ÅÀÇ Å¬¶óÀÌ¾ðÆ® ¿¡°Ô¸¸ RPCÈ£ÃâÀ» ÇÒ ¼ö ÀÖÀ½
+	{// ë‹¤ë¥¸ í´ë¼ì´ì–¸íŠ¸ì™€ ë™ê¸°í™” ë˜ì§€ ì•ŠëŠ” ì˜¤ë¸Œì íŠ¸ëŠ” ì˜¤ì§ ìžì‹ ì˜ í´ë¼ì´ì–¸íŠ¸ ì—ê²Œë§Œ RPCí˜¸ì¶œì„ í•  ìˆ˜ ìžˆìŒ
 		if (gameObject->owner != nullptr)
 		{
-			std::cout << "isSyncingObject°¡ falseÀÎ ¿ÀºêÁ§Æ®´Â ÀÚ½ÅÀÇ owner¿¡°Ô¸¸ RPCÈ£ÃâÀ» ÇÒ ¼ö ÀÖ½À´Ï´Ù. ¿ÀºêÁ§Æ® ÀÌ¸§ : " << gameObject->GetName() << std::endl;
+			std::cout << "isSyncingObjectê°€ falseì¸ ì˜¤ë¸Œì íŠ¸ëŠ” ìžì‹ ì˜ ownerì—ê²Œë§Œ RPCí˜¸ì¶œì„ í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ì˜¤ë¸Œì íŠ¸ ì´ë¦„ : " << gameObject->GetName() << std::endl;
 		}
 		else
 		{
-			std::cout << "isSyncingObject°¡ falseÀÌ¸ç owner°¡ ¾ø´Â ¿ÀºêÁ§Æ®ÀÇ RPCÈ£ÃâÀº Çô¿ëµÇÁö ¾Ê½À´Ï´Ù. ¿ÀºêÁ§Æ® ÀÌ¸§ : " << gameObject->GetName() << std::endl;
+			std::cout << "isSyncingObjectê°€ falseì´ë©° ownerê°€ ì—†ëŠ” ì˜¤ë¸Œì íŠ¸ì˜ RPCí˜¸ì¶œì€ í˜€ìš©ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤. ì˜¤ë¸Œì íŠ¸ ì´ë¦„ : " << gameObject->GetName() << std::endl;
 		}
 		return;
 	}
@@ -94,7 +94,7 @@ inline void MinNetComponent::RPC(std::string methodName, MinNetRpcTarget target,
 	{
 	case MinNetRpcTarget::All:
 	case MinNetRpcTarget::AllViaServer:
-	case MinNetRpcTarget::Server:// RPC´ë»óÀÌ ¼­¹ö ÀÌ¹Ç·Î ºê·ÎµåÄ³½ºÆ® ÇÏÁö ¾ÊÀ½
+	case MinNetRpcTarget::Server:// RPCëŒ€ìƒì´ ì„œë²„ ì´ë¯€ë¡œ ë¸Œë¡œë“œìºìŠ¤íŠ¸ í•˜ì§€ ì•ŠìŒ
 		if (parametersPacket != nullptr)
 		{
 			parametersPacket->set_buffer_position(Defines::HEADERSIZE);
@@ -145,14 +145,14 @@ template<typename ...args>
 inline void MinNetComponent::RPCudp(std::string methodName, MinNetRpcTarget target, args && ...parameters)
 {
 	if (!gameObject->isSyncingObject)
-	{// ´Ù¸¥ Å¬¶óÀÌ¾ðÆ®¿Í µ¿±âÈ­ µÇÁö ¾Ê´Â ¿ÀºêÁ§Æ®´Â ¿ÀÁ÷ ÀÚ½ÅÀÇ Å¬¶óÀÌ¾ðÆ® ¿¡°Ô¸¸ RPCÈ£ÃâÀ» ÇÒ ¼ö ÀÖÀ½
+	{// ë‹¤ë¥¸ í´ë¼ì´ì–¸íŠ¸ì™€ ë™ê¸°í™” ë˜ì§€ ì•ŠëŠ” ì˜¤ë¸Œì íŠ¸ëŠ” ì˜¤ì§ ìžì‹ ì˜ í´ë¼ì´ì–¸íŠ¸ ì—ê²Œë§Œ RPCí˜¸ì¶œì„ í•  ìˆ˜ ìžˆìŒ
 		if (gameObject->owner != nullptr)
 		{
-			std::cout << "isSyncingObject°¡ falseÀÎ ¿ÀºêÁ§Æ®´Â ÀÚ½ÅÀÇ owner¿¡°Ô¸¸ RPCÈ£ÃâÀ» ÇÒ ¼ö ÀÖ½À´Ï´Ù. ¿ÀºêÁ§Æ® ÀÌ¸§ : " << gameObject->GetName() << std::endl;
+			std::cout << "isSyncingObjectê°€ falseì¸ ì˜¤ë¸Œì íŠ¸ëŠ” ìžì‹ ì˜ ownerì—ê²Œë§Œ RPCí˜¸ì¶œì„ í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ì˜¤ë¸Œì íŠ¸ ì´ë¦„ : " << gameObject->GetName() << std::endl;
 		}
 		else
 		{
-			std::cout << "isSyncingObject°¡ falseÀÌ¸ç owner°¡ ¾ø´Â ¿ÀºêÁ§Æ®ÀÇ RPCÈ£ÃâÀº Çô¿ëµÇÁö ¾Ê½À´Ï´Ù. ¿ÀºêÁ§Æ® ÀÌ¸§ : " << gameObject->GetName() << std::endl;
+			std::cout << "isSyncingObjectê°€ falseì´ë©° ownerê°€ ì—†ëŠ” ì˜¤ë¸Œì íŠ¸ì˜ RPCí˜¸ì¶œì€ í˜€ìš©ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤. ì˜¤ë¸Œì íŠ¸ ì´ë¦„ : " << gameObject->GetName() << std::endl;
 		}
 		return;
 	}
@@ -171,7 +171,7 @@ inline void MinNetComponent::RPCudp(std::string methodName, MinNetRpcTarget targ
 	{
 	case MinNetRpcTarget::All:
 	case MinNetRpcTarget::AllViaServer:
-	case MinNetRpcTarget::Server:// RPC´ë»óÀÌ ¼­¹ö ÀÌ¹Ç·Î ºê·ÎµåÄ³½ºÆ® ÇÏÁö ¾ÊÀ½
+	case MinNetRpcTarget::Server:// RPCëŒ€ìƒì´ ì„œë²„ ì´ë¯€ë¡œ ë¸Œë¡œë“œìºìŠ¤íŠ¸ í•˜ì§€ ì•ŠìŒ
 		if (parametersPacket != nullptr)
 		{
 			parametersPacket->set_buffer_position(Defines::HEADERSIZE);

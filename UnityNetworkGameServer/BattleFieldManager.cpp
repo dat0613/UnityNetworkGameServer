@@ -1,4 +1,4 @@
-#include "BattleFieldManager.h"
+Ôªø#include "BattleFieldManager.h"
 #include "PlayerMove.h"
 #include <MinNetGameObject.h>
 #include <MinNetRoom.h>
@@ -90,15 +90,15 @@ void BattleFieldManager::Update()
 			PlayerDieUpdate(player);
 		}
 		else
-		{// ¡¶∞≈ «ÿ¡÷æÓæﬂ «‘
+		{// Ï†úÍ±∞ Ìï¥Ï£ºÏñ¥Ïïº Ìï®
 
 		}
 	}
 
 	if (winnerTeam != PlayerMove::Team::None)
-	{//∞‘¿”¿Ã ≥°≥™∞Ì «√∑π¿ÃæÓµÈ¿Ã ∞·∞˙√¢¿ª ∫∏∞Ì¿÷¿Ω
+	{//Í≤åÏûÑÏù¥ ÎÅùÎÇòÍ≥† ÌîåÎ†àÏù¥Ïñ¥Îì§Ïù¥ Í≤∞Í≥ºÏ∞ΩÏùÑ Î≥¥Í≥†ÏûàÏùå
 		if (MinNetTime::curTime() - winTime > winDelayTime)
-		{// ¿œ¡§Ω√∞£»ƒø° ∏µÁ ø¿∫Í¡ß∆Æ∏¶ æ¯æ÷∞Ì ¥ŸΩ√ ¥Î±‚Ω«∑Œ µπ∏≤
+		{// ÏùºÏ†ïÏãúÍ∞ÑÌõÑÏóê Î™®Îì† Ïò§Î∏åÏ†ùÌä∏Î•º ÏóÜÏï†Í≥† Îã§Ïãú ÎåÄÍ∏∞Ïã§Î°ú ÎèåÎ¶º
 			gameObject->GetNowRoom()->ChangeRoom("ReadyRoom");
 		}
 	}
@@ -134,7 +134,7 @@ PlayerMove::Team BattleFieldManager::getPeacefulTeam()
 	}
 
 	if (blueTeamCount == redTeamCount)
-	{// ªÁ∂˜ºˆ ∞∞¿∏∏È ∑£¥˝¿∏∑Œ «‘
+	{// ÏÇ¨ÎûåÏàò Í∞ôÏúºÎ©¥ ÎûúÎç§ÏúºÎ°ú Ìï®
 		if (rand() % 2 == 0)
 			return PlayerMove::Team::Red;
 		else
@@ -142,9 +142,9 @@ PlayerMove::Team BattleFieldManager::getPeacefulTeam()
 	}
 	else
 	{
-		if (blueTeamCount > redTeamCount)// ∑πµÂ∆¿ø° ªÁ∂˜¿Ã ¥ı ¿˚¿Ω
+		if (blueTeamCount > redTeamCount)// Î†àÎìúÌåÄÏóê ÏÇ¨ÎûåÏù¥ Îçî Ï†ÅÏùå
 			return PlayerMove::Team::Red;
-		else// ∫Ì∑Á∆¿ø° ªÁ∂˜¿Ã ¥ı ¿˚¿Ω
+		else// Î∏îÎ£®ÌåÄÏóê ÏÇ¨ÎûåÏù¥ Îçî Ï†ÅÏùå
 			return PlayerMove::Team::Blue;
 	}
 }
@@ -170,16 +170,16 @@ bool BattleFieldManager::isPeacefulTeam(PlayerMove::Team team)
 	}
 
 	if (blueTeamCount == redTeamCount)
-	{// ªÁ∂˜ºˆ ∞∞¿∏∏È ∑£¥˝¿∏∑Œ «‘
+	{// ÏÇ¨ÎûåÏàò Í∞ôÏúºÎ©¥ ÎûúÎç§ÏúºÎ°ú Ìï®
 		return true;
 	}
 	else
 	{
 		PlayerMove::Team peacefulTeam = PlayerMove::Team::None;
 
-		if (blueTeamCount > redTeamCount)// ∑πµÂ∆¿ø° ªÁ∂˜¿Ã ¥ı ¿˚¿Ω
+		if (blueTeamCount > redTeamCount)// Î†àÎìúÌåÄÏóê ÏÇ¨ÎûåÏù¥ Îçî Ï†ÅÏùå
 			peacefulTeam = PlayerMove::Team::Red;
-		else// ∫Ì∑Á∆¿ø° ªÁ∂˜¿Ã ¥ı ¿˚¿Ω
+		else// Î∏îÎ£®ÌåÄÏóê ÏÇ¨ÎûåÏù¥ Îçî Ï†ÅÏùå
 			peacefulTeam = PlayerMove::Team::Blue;
 		
 		return peacefulTeam == team;
@@ -238,9 +238,9 @@ void BattleFieldManager::PlayerRespawnUpdate(PlayerMove * player)
 		return;
 
 	if (player->team == PlayerMove::Team::Spectator)
-	{// ∞¸¿¸¿⁄ ¡ﬂø°
+	{// Í¥ÄÏ†ÑÏûê Ï§ëÏóê
 		if (player->nextSpawnTeam != PlayerMove::Team::None)
-		{// ∞‘¿”ø° ¬¸ø©«œ∑¡«œ¥¬ ªÁ∂˜¿Ã ¿÷¥Ÿ∏È ∆¿ø° ≥÷æÓ¡‹
+		{// Í≤åÏûÑÏóê Ï∞∏Ïó¨ÌïòÎ†§ÌïòÎäî ÏÇ¨ÎûåÏù¥ ÏûàÎã§Î©¥ ÌåÄÏóê ÎÑ£Ïñ¥Ï§å
 			auto spawn = player->nextSpawnTeam;
 
 			if (!isPeacefulTeam(spawn))
@@ -256,7 +256,7 @@ void BattleFieldManager::PlayerRespawnUpdate(PlayerMove * player)
 	}
 
 	if (player->IsCanRespawn(playerRespawnDelay))
-	{// ∏ÆΩ∫∆˘ Ω√ƒ—¡‹
+	{// Î¶¨Ïä§Ìè∞ ÏãúÏºúÏ§å
 		auto& spawn = player->nextSpawnTeam;
 
 		if (spawn != PlayerMove::Team::None)
@@ -273,8 +273,8 @@ void BattleFieldManager::PlayerRespawnUpdate(PlayerMove * player)
 				if (redTeamTicketCount > 0)
 					redTeamTicketCount--;
 				else
-				{// ∑πµÂ∆¿ ∆–πË
-					std::cout << "∑πµÂ∆¿ ∆–πË" << std::endl;
+				{// Î†àÎìúÌåÄ Ìå®Î∞∞
+					std::cout << "Î†àÎìúÌåÄ Ìå®Î∞∞" << std::endl;
 					winnerTeam = PlayerMove::Team::Blue;
 					gameEnd = true;
 				}
@@ -285,8 +285,8 @@ void BattleFieldManager::PlayerRespawnUpdate(PlayerMove * player)
 				if (blueTeamTicketCount > 0)
 					blueTeamTicketCount--;
 				else
-				{// ∫Ì∑Á∆¿ ∆–πË
-					std::cout << "∫Ì∑Á∆¿ ∆–πË" << std::endl;
+				{// Î∏îÎ£®ÌåÄ Ìå®Î∞∞
+					std::cout << "Î∏îÎ£®ÌåÄ Ìå®Î∞∞" << std::endl;
 					winnerTeam = PlayerMove::Team::Red;
 					gameEnd = true;
 				}
@@ -311,7 +311,7 @@ void BattleFieldManager::PlayerDieUpdate(PlayerMove * player)
 		return;
 
 	if (player->IsDie())
-	{// «√∑π¿ÃæÓ∞° ¡◊æ˙¿Ω
+	{// ÌîåÎ†àÏù¥Ïñ¥Í∞Ä Ï£ΩÏóàÏùå
 		player->ChangeState(PlayerMove::State::Die);
 	}
 }
