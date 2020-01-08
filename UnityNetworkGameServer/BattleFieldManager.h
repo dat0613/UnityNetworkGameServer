@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include <MinNetComponent.h>
+#include <MinNetp2pGroup.h>
 #include <list>
 #include <vector>
 #include <Time.h>
@@ -31,6 +32,7 @@ public:
 	void OnInstantiate(MinNetUser * user) override;
 	void OnDestroy() override;
 
+	MinNetp2pGroup * group = nullptr;
 
 	clock_t playerRespawnDelay = 3000;
 	int maxTicket = 50;

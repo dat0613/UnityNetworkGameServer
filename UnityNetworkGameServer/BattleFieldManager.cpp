@@ -7,6 +7,7 @@
 void BattleFieldManager::AddPlayer(std::weak_ptr<MinNetComponent> player)
 {
 	auto playerMove =  static_cast<PlayerMove *>(player.lock().get());
+	group->AddMember(playerMove->gameObject->owner);
 
 	playerMove->RPC("SetMaxHP", MinNetRpcTarget::All, playerMaxHP);
 	playerMove->damage = defaultDamage;
@@ -24,6 +25,7 @@ void BattleFieldManager::AddPlayer(std::weak_ptr<MinNetComponent> player)
 
 void BattleFieldManager::DelPlayer(std::weak_ptr<MinNetComponent> player)
 {
+	group->DelMember(player.lock()->gameObject->owner);
 	playerList.remove_if([player](std::weak_ptr<MinNetComponent> p) {
 		auto srcPlayer = player.lock();
 		auto dstPlayer = p.lock();
@@ -75,6 +77,7 @@ void BattleFieldManager::Awake()
 
 	controllAllow = true;
 	
+	group = new MinNetp2pGroup(gameObject->GetNowRoom());
 	//SendChangeState(BattleFieldState::GameReady);
 }
 
@@ -330,6 +333,7 @@ void BattleFieldManager::SetGameOption()
 
 BattleFieldManager::BattleFieldManager()
 {
+
 }
 
 BattleFieldManager::~BattleFieldManager()
